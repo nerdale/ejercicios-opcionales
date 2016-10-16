@@ -33,5 +33,5 @@ function sumaCuadrado(){
 	function add(a, b) {
 		return a + b;
 	}
-	alert("El resultado de la sumatoria entre los números  " + arreglo[0] + " y " + arreglo[1] + " es " + suma + " y el cuadrado del resultado es " + suma*suma);
+	alert("El resultado de la sumatoria entre los números  " + arreglo[0] + " y " + arreglo[1] + " es " + suma + " y el cuadrado del resultado es " + Math.pow(suma,2));
 }
