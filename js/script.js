@@ -1,6 +1,7 @@
 // #1 Elaborar una función a la  cual le enviaremos tres enteros y muestra  el menos
-var ar_menor=[];
+
 function numeroMenor(ar_menor){
+	var ar_menor=[];
 	var numeroMenor = Math.min.apply(null, ar_menor);
 	for (var i = 0; i <3; i++){
 		ar_menor.push(prompt("Ingrese un número"));
@@ -10,7 +11,6 @@ function numeroMenor(ar_menor){
 /* #2 Escribir el codigo de una funcion a la que se pasa como parametro un numero entero 
 y devuelve como resultado un cadena de texto que indica si el numero es par o impar 
 mostrar por pantalla el resultado devuelto por la funcion*/
-
 function numerosPares(numeros_pares) {
 	var numeros_pares = [];
 	var primerNum = prompt("Indique el primer numero del arreglo");
@@ -23,8 +23,8 @@ function numerosPares(numeros_pares) {
 	return alert("Los numeros pares entre " + primerNum + " y " + ultimoNum + " son: " + numeros_pares);
 }
 // #3 Realizar una función a la cual le envie tres enteros y los muestre ordenados de menor  a mayor 
-var menor_mayor = [];
 function menorMayorArreglo(menor_mayor){
+	var menor_mayor = [];
 	var texto = "Los números ordenados de menor a mayor es ";
 	for(var i = 0; i < 3; i++){
 		menor_mayor.push(prompt("Ingrese un numero"));
