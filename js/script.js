@@ -11,17 +11,19 @@ function numeroMenor(ar_menor){
 /* #2 Escribir el codigo de una funcion a la que se pasa como parametro un numero entero 
 y devuelve como resultado un cadena de texto que indica si el numero es par o impar 
 mostrar por pantalla el resultado devuelto por la funcion*/
-function numerosPares(numeros_pares) {
-	var numeros_pares = [];
-	var primerNum = prompt("Indique el primer numero del arreglo");
-	var ultimoNum = prompt("Indique el ultimo numero del arreglo");
-	for (var i = primerNum; i <= ultimoNum; i++) {
-		if((i % 2) === 0){
-			numeros_pares.push(i);
-		}
+function numerosPares(){
+	var arreglo_numeros = [];
+	for(var i = 0; i < 5; i++){
+		arreglo_numeros.push(prompt("Ingrese un numero (en total 5)"));
 	}
-	return alert("Los numeros pares entre " + primerNum + " y " + ultimoNum + " son: " + numeros_pares);
+	var pares = arreglo_numeros.filter(function (num) {
+		if( num >= 1){
+			return num % 2 === 0;
+		}
+	})
+	alert("Los números ingresados son: " + arreglo_numeros + " y los números pares son: " + pares);
 }
+
 // #3 Realizar una función a la cual le envie tres enteros y los muestre ordenados de menor  a mayor 
 function menorMayorArreglo(menor_mayor){
 	var menor_mayor = [];
@@ -43,3 +45,6 @@ function sumaCuadrado(){
 	}
 	alert("El resultado de la sumatoria entre los números  " + arreglo[0] + " y " + arreglo[1] + " es " + suma + " y el cuadrado del resultado es " + Math.pow(suma,2));
 }
+
+
+
