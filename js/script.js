@@ -39,12 +39,18 @@ function menorMayorArreglo(menor_mayor){
 // #7 Realizar un programa que calcule el cuadrado de la suma de dos numeros
 function sumaCuadrado(){
 	var arreglo = [3, 2];
-	var suma = [3, 2].reduce(add, 0);
-	function add(a, b) {
-		return a + b;
+	var suma = [3, 2].reduce(suma, 0);
+	function suma(elementoUno, elementoDos) {
+		return elementoUno + elementoDos;
 	}
 	alert("El resultado de la sumatoria entre los números  " + arreglo[0] + " y " + arreglo[1] + " es " + suma + " y el cuadrado del resultado es " + Math.pow(suma,2));
 }
 
-
-
+function sumaCuadrado(){
+	var numbers = [3,2];
+	var sum = 0;
+	for(var i = 0; i < numbers.length; i++){
+		sum += numbers[i]
+	}
+	alert("La suma entre los números " + numbers[0] + " y " + numbers[1] + " es: " + sum +  " y el cuadrado del resultado es " + Math.pow(sum,2));
+}
