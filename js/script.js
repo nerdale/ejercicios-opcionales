@@ -1,12 +1,12 @@
 // #1 Elaborar una función a la  cual le enviaremos tres enteros y muestra  el menos
 
-function numeroMenor(ar_menor){
+function numeroMenor(){
 	var ar_menor=[];
 	var numeroMenor = Math.min.apply(null, ar_menor);
 	for (var i = 0; i <3; i++){
 		ar_menor.push(prompt("Ingrese un número"));
 	}
-	alert("el número menor entre " + ar_menor[0] + ", " + ar_menor[1] + " y " + ar_menor[2]+ " es " + Math.min.apply(null, ar_menor));
+	return alert("el número menor entre " + ar_menor[0] + ", " + ar_menor[1] + " y " + ar_menor[2]+ " es " + Math.min.apply(null, ar_menor));
 }
 /* #2 Escribir el codigo de una funcion a la que se pasa como parametro un numero entero 
 y devuelve como resultado un cadena de texto que indica si el numero es par o impar 
@@ -21,11 +21,11 @@ function numerosPares(){
 			return num % 2 === 0;
 		}
 	})
-	alert("Los números ingresados son: " + arreglo_numeros + " y los números pares son: " + pares);
+	return alert("Los números ingresados son: " + arreglo_numeros + " y los números pares son: " + pares);
 }
 
 // #3 Realizar una función a la cual le envie tres enteros y los muestre ordenados de menor  a mayor 
-function menorMayorArreglo(menor_mayor){
+function menorMayorArreglo(){
 	var menor_mayor = [];
 	var texto = "Los números ordenados de menor a mayor es ";
 	for(var i = 0; i < 3; i++){
@@ -34,7 +34,7 @@ function menorMayorArreglo(menor_mayor){
 	function comparacion(primero, segundo) {
 		return primero - segundo; //-1 0 1
 	}
-	alert(texto + menor_mayor.sort(comparacion));
+	return alert(texto + menor_mayor.sort(comparacion));
 }
 // #7 Realizar un programa que calcule el cuadrado de la suma de dos numeros
 function sumaCuadrado(){
@@ -43,7 +43,7 @@ function sumaCuadrado(){
 	function suma(elementoUno, elementoDos) {
 		return elementoUno + elementoDos;
 	}
-	alert("El resultado de la sumatoria entre los números  " + arreglo[0] + " y " + arreglo[1] + " es " + suma + " y el cuadrado del resultado es " + Math.pow(suma,2));
+	return alert("El resultado de la sumatoria entre los números  " + arreglo[0] + " y " + arreglo[1] + " es " + suma + " y el cuadrado del resultado es " + Math.pow(suma,2));
 }
 
 function sumaCuadrado(){
@@ -52,5 +52,5 @@ function sumaCuadrado(){
 	for(var i = 0; i < numeros.length; i++){
 		sum += numeros[i]
 	}
-	alert("La suma entre los números " + numeros[0] + " y " + numeros[1] + " es: " + sum +  " y el cuadrado del resultado es " + Math.pow(sum,2));
+	return alert("La suma entre los números " + numeros[0] + " y " + numeros[1] + " es: " + sum +  " y el cuadrado del resultado es " + Math.pow(sum,2));
 }
