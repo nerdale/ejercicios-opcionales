@@ -47,10 +47,10 @@ function sumaCuadrado(){
 }
 
 function sumaCuadrado(){
-	var numbers = [3,2];
+	var numeros = [3,2];
 	var sum = 0;
-	for(var i = 0; i < numbers.length; i++){
-		sum += numbers[i]
+	for(var i = 0; i < numeros.length; i++){
+		sum += numeros[i]
 	}
-	alert("La suma entre los números " + numbers[0] + " y " + numbers[1] + " es: " + sum +  " y el cuadrado del resultado es " + Math.pow(sum,2));
+	alert("La suma entre los números " + numeros[0] + " y " + numeros[1] + " es: " + sum +  " y el cuadrado del resultado es " + Math.pow(sum,2));
 }
