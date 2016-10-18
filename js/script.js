@@ -122,6 +122,11 @@ function digitosFuncion(numero){
 	alert( "La cantidad de digitos es: " + cantidadDigitos);
 }
 
+function digitosFuncion(numero){
+	var numero = prompt("Ingrese un digito");
+	alert( "La cantidad de digitos es: " + numero.length);
+}
+
 function multiplosFuncion(numero){
 	var numero = parseInt(prompt("Ingrese un número"));
 	var resultado = "Los múltiplos de " + numero + " son: ";
