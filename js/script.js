@@ -122,19 +122,6 @@ function digitosFuncion(numero){
 	alert( "La cantidad de digitos es: " + cantidadDigitos);
 }
 
-function palindromoFuncion(palabra){
-	var palabra = prompt("ingrese una palabra");
-	var resultado = "La palabra " + palabra;
-	var especiales = /[^A-Za-z0-9]/g;
-	var palabra = palabra.toLowerCase().replace(especiales, ""); //le quito espacios en blanco y caract. especiales
-	if(palabra !== palabra.split("").reverse().join("")){ //compara si la palabra inicial es distinta a la palabra separada(split), dada vuelta(reverse) y unida nuevamente(join)
-		resultado += " no es palindromo";
-	}else{
-		resultado +=  " es palindromo";
-	}
-	alert(resultado);
-}
-
 function multiplosFuncion(numero){
 	var numero = parseInt(prompt("Ingrese un número"));
 	var resultado = "Los múltiplos de " + numero + " son: ";
