@@ -59,7 +59,7 @@ function numeroMenorFuncion(numUno, numDos, numTres){
 	var numDos = parseInt(prompt("Ingrese el segundo numero"));
 	var numTres = parseInt(prompt("Ingrese el tercer numero"));
 	var numeroMenor = Math.min(numUno, numDos, numTres);
-	alert("El número menor entre : " + numUno + "," + numDos + "," + numTres + " es: " + numeroMenor);
+	alert("El número menor entre : " + numUno + "," + numDos + "y " + numTres + " es: " + numeroMenor);
 }
 
 function esParFuncion(num){
@@ -74,20 +74,20 @@ function esParFuncion(num){
 }
 
 function menorMayorFuncion(a, b, c){
-	var a = parseInt(prompt("Ingrese primer número"));
-	var b = parseInt(prompt("Ingrese segundo número"));
-	var c = parseInt(prompt("Ingrese tercer número"));
+	var a = prompt("Ingrese primer número");
+	var b = prompt("Ingrese segundo número");
+	var c = prompt("Ingrese tercer número");
 	var resultado = "El orden de menor a mayor ";
 	if(a < b && a < c && b < c){
-		return resultado += "es: " + a + ", " + b +  ", " + c;
+		resultado += "es: " + a + ", " + b +  ", " + c;
 	}else if (a < b && a < c && b > c){
-		return resultado += "es: " + a +  ", " + c +  ", " + b;
+		resultado += "es: " + a +  ", " + c +  ", " + b;
 	}else if (b < a && b < c && c < a){
-		return resultado += "es: " + b +  ", " + c +  ", " + a;
+		resultado += "es: " + b +  ", " + c +  ", " + a;
 	}else if (c < a && c < b && a > b){
-		return resultado += "es: " + c +  ", " + b +  ", " + a;
+		resultado += "es: " + c +  ", " + b +  ", " + a;
 	}else if ( c < b && c < a && b > a){
-		return resultado += "es: " + c +  ", " + a +  ", " + b;
+		resultado += "es: " + c +  ", " + a +  ", " + b;
 	}
 	alert(resultado);
 }
@@ -122,17 +122,27 @@ function digitosFuncion(numero){
 	alert( "La cantidad de digitos es: " + cantidadDigitos);
 }
 
-function palindromo(palabra){
+function palindromoFuncion(palabra){
 	var palabra = prompt("ingrese una palabra");
-	var resultado = "La palabra ingresada ";
+	var resultado = "La palabra " + palabra;
 	var especiales = /[^A-Za-z0-9]/g;
-	var palabra = palabra.toLowerCase().replace(especiales, "");
-	var largoP = palabra.length;
-	for (var i = 0; i < largoP/2; ++i){
-		if(palabra[i] !== palabra[largoP - 1 - i]){
-			return resultado += "no es palíndromo";
-		}
+	var palabra = palabra.toLowerCase().replace(especiales, ""); //le quito espacios en blanco y caract. especiales
+	if(palabra !== palabra.split("").reverse().join("")){ //compara si la palabra inicial es distinta a la palabra separada(split), dada vuelta(reverse) y unida nuevamente(join)
+		resultado += " no es palindromo";
+	}else{
+		resultado +=  " es palindromo";
 	}
-	return resultado += "es palíndromo";
+	alert(resultado);
 }
+
+function multiplosFuncion(numero){
+	var numero = parseInt(prompt("Ingrese un número"));
+	var resultado = "Los múltiplos de " + numero + " son: ";
+	for ( var i = 1; i < 11; ++i){
+		var multiplos = numero*i;
+		resultado += " " + multiplos.toString();
+	}
+	alert(resultado);
+}
+
 
