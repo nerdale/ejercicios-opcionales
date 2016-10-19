@@ -12,7 +12,7 @@ function numeroMenor(){
 function numerosPares(){
 	var arreglo_numeros = [];
 	for(var i = 0; i < 5; i++){
-		arreglo_numeros.push(prompt("Ingrese un numero (en total 5)"));
+		arreglo_numeros.push(prompt("Ingrese un número (en total 5)"));
 	}
 	var pares = arreglo_numeros.filter(function (num) {
 		if( num >= 1){
@@ -26,7 +26,7 @@ function menorMayorArreglo(){
 	var menor_mayor = [];
 	var texto = "Los números ordenados de menor a mayor es ";
 	for(var i = 0; i < 3; i++){
-		menor_mayor.push(prompt("Ingrese un numero"));
+		menor_mayor.push(prompt("Ingrese un número"));
 	}
 	function comparacion(primero, segundo) {
 		return primero - segundo; //-1 0 1
@@ -55,9 +55,9 @@ function sumaCuadrado(){
 //FUNCIONES
 
 function numeroMenorFuncion(numUno, numDos, numTres){
-	var numUno = parseInt(prompt("Ingrese el primer numero"));
-	var numDos = parseInt(prompt("Ingrese el segundo numero"));
-	var numTres = parseInt(prompt("Ingrese el tercer numero"));
+	var numUno = parseInt(prompt("Ingrese el primer número"));
+	var numDos = parseInt(prompt("Ingrese el segundo número"));
+	var numTres = parseInt(prompt("Ingrese el tercer número"));
 	var numeroMenor = Math.min(numUno, numDos, numTres);
 	alert("El número menor entre : " + numUno + "," + numDos + "y " + numTres + " es: " + numeroMenor);
 }
@@ -106,20 +106,10 @@ function minMayFuncion(palabra){
 }
 
 function sumaCuadradoFuncion(numUno, numDos){
-	var numUno = parseInt(prompt("Ingrese el primer numero"));
-	var numDos = parseInt(prompt("Ingrese el segundo numero"));
+	var numUno = parseInt(prompt("Ingrese el primer número"));
+	var numDos = parseInt(prompt("Ingrese el segundo número"));
 	var resultado = (numUno + numDos);
 	alert("El resultado de la sumatoria entre " + numUno + " y " + numDos + " es: " + resultado + " y el cuadrado de este es " + Math.pow(resultado, 2));
-}
-
-function digitosFuncion(numero){
-	var numero = parseInt(prompt("Ingrese un digito"));
-	var digitoString = numero.toString();
-	var cantidadDigitos = 0;	
-	for (var i = 0; i < digitoString.length; ++i){
-		++cantidadDigitos;
-	}
-	alert( "La cantidad de digitos es: " + cantidadDigitos);
 }
 
 function digitosFuncion(numero){
@@ -137,4 +127,53 @@ function multiplosFuncion(numero){
 	alert(resultado);
 }
 
+function sumarNumerosFuncion(numUno, numDos){
+	var numUno = parseInt(prompt("Ingrese primer número"));
+	var numDos = parseInt(prompt("Ingrese segundo número"));
+	var resultado = numUno + numDos;
+	alert("La suma entre " + numUno + " y " + numDos + " da como resultado: " + resultado);
+}
+
+function promedioFuncion(numUno, numDos, numTres){
+	var numUno = parseInt(prompt("Ingrese primer número"));
+	var numDos = parseInt(prompt("Ingrese segundo número"));
+	var numTres = parseInt(prompt("Ingrese tercer número"));
+	var promedio = (numUno + numDos + numTres)/3;
+	alert("El promedio entre " + numUno + ", " + numDos + " y " + numTres + " es: " + promedio.toFixed(2));
+}
+
+function areaTrianguloFuncion(base, altura){
+	var base = parseInt(prompt("Ingrese la base del triángulo (en cms)"));
+	var altura = parseInt(prompt("Ingrese la altura del triángulo (en cms)"));
+	var area = base*altura;
+	alert("La base del triángulo es: " + area + " cms");
+}
+
+function sueldoFuncion(hora, pago){
+	var hora = parseInt(prompt("Ingrese las horas que trabaja en promedio diariamente"));
+	var pago = parseInt(prompt("Ingrese el precio por hora"));
+	var resultadoDiario = hora*pago;
+	var resultadoSemanal = resultadoDiario*5;
+	alert("El pago por día es $" + resultadoDiario + ", en una semana laboral de lunes a viernes corresponde a un pago total de $" + resultadoSemanal);
+}
+
+function telefonoFuncion(minuto, costo){
+	var minuto = parseInt(prompt("Ingrese el total de minutos de la llamada"));
+	var costo = parseInt(prompt("Ingrese costo del minuto"));
+	var resultado = minuto*costo;
+	alert("El costo total de la llamada es $" + resultado);
+}
+
+function edadFuncion(nombre, edad){
+	var nombre = prompt("Hola, ingrese su nombre");
+	var edad = parseInt(prompt("Ingrese su edad"));
+	alert(nombre + ", no olvides que eres una hermosa persona y has vivido " + edad*365 + " días hasta el momento <3");
+}
+
+function areaCirculoFuncion(radio){
+	var radio = parseInt(prompt("Ingrese el radio del circulo"));
+	var p = 3.14159;
+	var area = (Math.pow(radio, 2))*p;
+	alert("El área del circulo es " + area);
+}
 
